@@ -5,7 +5,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #2f363e;
+    background-color: #071f3b;
 }
 
 *{
@@ -19,16 +19,17 @@ body{
     position: relative;
 }
 
-.clock{
+.clock {
     position: relative;
     width: 450px;
     height: 450px;
-    background: #2f363e;
-    box-shadow: 10px 50px 70px rgba(0,0,0,0.25), inset 5px 5px 10px rgba(0,0,0,0.5), inset 5px 5px 20px rgba(0,0,0,0.2), inset -5px -5px 15px rgba(0,0,0,0.75);
+    background: rgb(255 255 255 / 11%);
+    box-shadow: rgba(0, 0, 0, 0.25) 10px 50px 70px, rgb(133 195 184 / 50%) 5px 5px 10px inset, rgb(183 1 148 / 15%) 5px 5px 20px inset, rgb(36 146 137 / 75%) -5px -5px 15px inset;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    backdrop-filter: blur(3px);
 }
 
 .clock::before{
@@ -63,7 +64,7 @@ body{
     position: absolute;
     width: 300px;
     height: 300px;
-    border: 2px solid rgba(0,0,0,0.25);
+    border: 2px solid rgba(255, 255, 255, 0.25);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -110,4 +111,37 @@ body{
     background: var(--clr);
     border-radius: 50%;
     box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
+}
+
+
+/* eye styling */
+
+.box{
+    display: flex;
+}
+
+.box .eye{
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: block;
+    background: #fff;
+    margin: 0 20px;
+    border-radius: 50%;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.2), inset 0 0 15px #f2761e, inset 0 0 25px #f2761e;
+    
+}
+
+.box .eye::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 35px;
+    transform: translate(-50%, -50%);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #000;
+    border: 5px solid #2196f3;
+    box-sizing: border-box;
 }
